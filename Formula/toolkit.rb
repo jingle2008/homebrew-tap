@@ -10,7 +10,7 @@ class Toolkit < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jingle2008/toolkit/releases/download/v0.3.1/toolkit_0.3.1_darwin_amd64.tar.gz"
-      sha256 "525e60c5a16e91b41db5aef0b38c7d9b1b036bd1941aaf69aa32443595167d51"
+      sha256 "7dde71ac82652b31778bc9ea5b74e70a01093d1673ad31dcd12e04cfeaee3da3"
 
       define_method(:install) do
         bin.install "toolkit"
@@ -18,7 +18,7 @@ class Toolkit < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/jingle2008/toolkit/releases/download/v0.3.1/toolkit_0.3.1_darwin_arm64.tar.gz"
-      sha256 "cb53e26ea71b6c09e4955f9a1039c2e2ce8cfdb792195e6f3b77ded887bc833e"
+      sha256 "81042537806bdeb16d8ced97debbc7b79d2fb38afac9da16a29380410be13712"
 
       define_method(:install) do
         bin.install "toolkit"
@@ -29,14 +29,14 @@ class Toolkit < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/jingle2008/toolkit/releases/download/v0.3.1/toolkit_0.3.1_linux_amd64.tar.gz"
-      sha256 "a00ffa9dd9f9ca79c8389e8fd8d7c54695ab824d6631456d6f25a435a036ccbc"
+      sha256 "92fa97f8e4b5cf2b42ccb1561a3f326b4765a4ef5e3d58129f32a56753cc3794"
       define_method(:install) do
         bin.install "toolkit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/jingle2008/toolkit/releases/download/v0.3.1/toolkit_0.3.1_linux_arm64.tar.gz"
-      sha256 "54577f51d70c13535510d9ad32793edf15236447495d08ab50655e1ab658e6b9"
+      sha256 "910542e788eb0be4d21b9e3ddd6ae29d9433b60c75cbb215163781f510c1f2be"
       define_method(:install) do
         bin.install "toolkit"
       end
