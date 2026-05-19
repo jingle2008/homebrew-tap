@@ -72,17 +72,14 @@ brew install jingle2008/tap/toolkit
 
 ### macOS: "toolkit cannot be opened" / "developer cannot be verified"
 
-The released binaries are not yet code-signed with a Developer ID, so Gatekeeper quarantines them on first launch. Workaround:
+The released binaries are not yet code-signed with a Developer ID, so Gatekeeper quarantines them on first launch. Install normally, then strip the quarantine attribute:
 
 ```sh
+brew install jingle2008/tap/toolkit
 xattr -dr com.apple.quarantine "$(brew --prefix)/bin/toolkit"
 ```
 
-Or, if installed via Cask:
-
-```sh
-brew install --cask --no-quarantine jingle2008/tap/toolkit
-```
+(Homebrew removed the `--no-quarantine` install switch outright — there is no replacement that suppresses the attribute at install time. The post-install `xattr` is the only documented workaround.)
 
 Code-signing + Apple notarization is wired in the upstream release pipeline and waiting on the operator to provision Apple Developer credentials. See [`docs/release/macos-notarization.md`](https://github.com/jingle2008/toolkit/blob/main/docs/release/macos-notarization.md) for status. Once notarized binaries ship, this section becomes unnecessary.
 
