@@ -5,20 +5,20 @@
 class Toolkit < Formula
   desc "Toolkit CLI: cross-platform command-line tool for cloud & infra automation"
   homepage "https://github.com/jingle2008/toolkit"
-  version "0.14.0"
+  version "0.15.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jingle2008/toolkit/releases/download/v0.14.0/toolkit_0.14.0_darwin_amd64.tar.gz"
-      sha256 "290d203337991004decaf5599f447825e6b1c96e39c56134f41b3c30f23cec58"
+      url "https://github.com/jingle2008/toolkit/releases/download/v0.15.0/toolkit_0.15.0_darwin_amd64.tar.gz"
+      sha256 "969aa36c42ebaebceb2ff5313fa5957db69e4472cae96476c06a384ce120aa62"
 
       define_method(:install) do
         bin.install "toolkit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jingle2008/toolkit/releases/download/v0.14.0/toolkit_0.14.0_darwin_arm64.tar.gz"
-      sha256 "29963660892081cce3da5cb346e3a83a344cde0a1c7f6f1641522d8841ef368e"
+      url "https://github.com/jingle2008/toolkit/releases/download/v0.15.0/toolkit_0.15.0_darwin_arm64.tar.gz"
+      sha256 "b30c7450a1f8f20d19c4dab77ab2fe9f931ba55a7f1386d8806e7eb33415690f"
 
       define_method(:install) do
         bin.install "toolkit"
@@ -28,15 +28,15 @@ class Toolkit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jingle2008/toolkit/releases/download/v0.14.0/toolkit_0.14.0_linux_amd64.tar.gz"
-      sha256 "ce8c6c98b4d106e86729d4f2f5613e58e13e5c38b1619a404d55e386888d2e7c"
+      url "https://github.com/jingle2008/toolkit/releases/download/v0.15.0/toolkit_0.15.0_linux_amd64.tar.gz"
+      sha256 "22749b9973f830814c2d1f662bf8e1d915e45c5c02a3ad2843a323c15940f53c"
       define_method(:install) do
         bin.install "toolkit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jingle2008/toolkit/releases/download/v0.14.0/toolkit_0.14.0_linux_arm64.tar.gz"
-      sha256 "f9e2dbbda940b71b5b5ee7ea83a6aac02fac9ad3851eea7e4b0cd957a76fc4a8"
+      url "https://github.com/jingle2008/toolkit/releases/download/v0.15.0/toolkit_0.15.0_linux_arm64.tar.gz"
+      sha256 "c66514e25d6cb29cfc49ec962b51c6bec42c44da6406426149d6cf1067f105fd"
       define_method(:install) do
         bin.install "toolkit"
       end
